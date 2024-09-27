@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const StyledFilter = styled.div`
   border: 1px solid var(--color-grey-100);

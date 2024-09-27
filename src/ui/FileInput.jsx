@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const FileInput = styled.input`
   font-size: 1.4rem;
@@ -14,7 +14,9 @@ const FileInput = styled.input`
     color: var(--color-brand-50);
     background-color: var(--color-brand-600);
     cursor: pointer;
-    transition: color 0.2s, background-color 0.2s;
+    transition:
+      color 0.2s,
+      background-color 0.2s;
 
     &:hover {
       background-color: var(--color-brand-700);

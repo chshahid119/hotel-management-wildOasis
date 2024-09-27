@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledErrorFallback = styled.main`
   height: 100vh;
@@ -24,7 +24,7 @@ const Box = styled.div`
   }
 
   & p {
-    font-family: "Sono";
+    font-family: 'Sono';
     margin-bottom: 3.2rem;
     color: var(--color-grey-500);
   }

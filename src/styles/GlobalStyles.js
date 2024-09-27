@@ -1,5 +1,4 @@
-import { createGlobalStyle } from "styled-components";
-
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
@@ -185,9 +184,6 @@ FOR DARK MODE
 --image-opacity: 90%;
 */
 
-`
-
-
-
+`;
 
 export default GlobalStyles;
