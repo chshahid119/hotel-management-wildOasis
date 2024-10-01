@@ -38,3 +38,17 @@ const Discount = styled.div`
   font-weight: 500;
   color: var(--color-green-700);
 `;
+
+
+
+function CabinRow({cabin}) {
+  return <TableRow role='row'>
+    <Img src="https://zxpaxwzbcylqriumgaao.supabase.co/storage/v1/object/public/cabin-images/cabin-001.jpg" alt=""/>
+   
+ </TableRow>
+}
+
+
+export default CabinRow
+
+
