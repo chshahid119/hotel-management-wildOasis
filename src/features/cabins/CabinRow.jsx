@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { formatCurrency } from './../../utils/helpers';
 
 const TableRow = styled.div`
   display: grid;
@@ -11,6 +12,7 @@ const TableRow = styled.div`
     border-bottom: 1px solid var(--color-grey-100);
   }
 `;
+
 
 const Img = styled.img`
   display: block;
@@ -41,10 +43,16 @@ const Discount = styled.div`
 
 
 
-function CabinRow({cabin}) {
+function CabinRow({ cabin }) {
+  
+  const { name, maxCapacity, regularPrice, discount, image } = cabin;
   return <TableRow role='row'>
-    <Img src="https://zxpaxwzbcylqriumgaao.supabase.co/storage/v1/object/public/cabin-images/cabin-001.jpg" alt=""/>
-   
+    <img src={image} alt={name} />
+    <Cabin>{name}</Cabin>
+    <div>Fits up to {maxCapacity} guests</div>
+    <Price>{formatCurrency(regularPrice)}</Price>
+    <Discount>{formatCurrency(discount)}</Discount>
+    <button>Delete</button>
  </TableRow>
 }
 
