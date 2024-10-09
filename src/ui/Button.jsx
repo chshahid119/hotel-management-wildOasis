@@ -48,7 +48,7 @@ const variations = {
     }
   `,
 };
-console.log(variations);
+// console.log(variations);
 
 const Button = styled.button`
   border: none;
