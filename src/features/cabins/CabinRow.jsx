@@ -81,7 +81,7 @@ function CabinRow({ cabin }) {
         <Price>{formatCurrency(regularPrice)}</Price>
         {discount ? <Discount>{formatCurrency(discount)}</Discount> : <span>&mdash;</span>}
         <div>
-          <button onClick={handleDuplicate}><HiSquare2Stack /></button>
+          <button disabled={isCreating} onClick={handleDuplicate}><HiSquare2Stack /></button>
           <button onClick={() => setShowForm((show) => !show)}><HiPencil /></button>
           <button onClick={() => deleteCabin(cabinId)} disabled={isDeleting}>
             <HiTrash />
