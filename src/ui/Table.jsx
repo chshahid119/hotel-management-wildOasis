@@ -79,7 +79,12 @@ function Row({children}) {
   const {columns} = useContext(TableContext);
   return <StyledRow columns={columns} role='row'>{children}</StyledRow>
 }
-function Body({children}) {}
+function Body({data, render}) {
+  if(!data.length) return <Empty>No data Show at the moment</Empty>
+  return <StyledBody role='rowgroup'>
+    {data.map(render)}
+  </StyledBody>
+}
 
 Table.Header = Header;
 Table.Body = Body;
