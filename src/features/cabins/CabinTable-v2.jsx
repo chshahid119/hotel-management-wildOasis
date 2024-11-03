@@ -4,6 +4,8 @@ import CabinRow from "./CabinRow";
 import { useCabins } from "./useCabins";
 import Table from '../../ui/Table';
 
+
+
 const TableHeader = styled.header`
   display: grid;
   grid-template-columns: 0.6fr 1.8fr 2.2fr 1fr 1fr 1fr;
@@ -28,16 +30,15 @@ export default function CabinTable() {
   
 
   return (
-    <Table columns="0.6fr 1.8fr 2.2fr 1fr 1fr 1fr">
-      <Table.Header>
+    <Table>
+      <TableHeader role="row">
         <div></div>
         <div>Cabin</div>
         <div>Capacity</div>
         <div>Price</div>
         <div>Discount</div>
         <div></div>
-      </Table.Header>
-      
+      </TableHeader>
       {cabins.map(cabin=><CabinRow cabin={cabin} key={cabin.id} />)}
    </Table>
   )
