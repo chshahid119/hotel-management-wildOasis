@@ -10,7 +10,7 @@ function useBookings() {
   const filter = !filterValue || filterValue === 'all' ? null : {field: 'status', value: filterValue};
 
     const {isLoading, data:bookings,error} = useQuery({
-        queryKey: ['bookings'],
+        queryKey: ['bookings', filter],
         queryFn: ()=>getBookings({filter})
       })
 
